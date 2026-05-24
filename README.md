@@ -29,3 +29,9 @@ docker run -d --name=netdata \
   --security-opt seccomp:unconfined \
   --restart=unless-stopped \
   netdata/netdata:latest
+
+# С помощью Docker compose
+
+Скачать docker-compose.yml
+
+Выполнить docker compose up -d
