@@ -1,0 +1,18 @@
+version: '3'
+services:
+  netdata:
+    image: netdata/netdata:latest
+    container_name: netdata
+    hostname: my-server
+    ports:
+      - "19999:19999"
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /var/run:/host/run:ro
+      - ./netdata-config:/etc/netdata
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    restart: unless-stopped

@@ -1,0 +1,7 @@
+*.htpasswd
+*.key
+*.pem
+*.log
+*.tmp
+.DS_Store
+netdata-config/
