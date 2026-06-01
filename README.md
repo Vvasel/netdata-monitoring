@@ -29,6 +29,7 @@ docker run -d --name=netdata \
   --security-opt seccomp:unconfined \
   --restart=unless-stopped \
   netdata/netdata:latest
+```
 
 # С помощью Docker compose
 
